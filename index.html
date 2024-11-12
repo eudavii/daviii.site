@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maunna Content</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f0f5ff 0%, #fff 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .cloud {
+            position: absolute;
+            opacity: 0.6;
+            fill: #fff;
+        }
+
+        .cloud-1 {
+            top: 20px;
+            left: 10%;
+            transform: scale(0.6);
+        }
+
+        .cloud-2 {
+            top: 40px;
+            right: 15%;
+            transform: scale(0.8);
+        }
+
+        .butterfly {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            opacity: 0.6;
+        }
+
+        .butterfly-1 {
+            top: 30px;
+            left: 30%;
+        }
+
+        .butterfly-2 {
+            top: 50px;
+            right: 25%;
+        }
+
+        .sun {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .profile-section {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .social-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+
+        .social-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .instagram { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); }
+        .twitter { background: #1DA1F2; }
+        .tiktok { background: #000000; }
+        .youtube { background: #FF0000; }
+        .spotify { background: #1DB954; }
+        .bluesky { background: #0560ff; }
+        .facebook { background: #1877F2; }
+
+        .content-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <!-- Elementos decorativos -->
+            <svg class="cloud cloud-1" width="100" height="40" viewBox="0 0 100 40">
+                <path d="M10 30 Q25 10 40 30 T70 30 Q85 30 90 20 T100 30 L100 40 L0 40 Z"></path>
+            </svg>
+            <svg class="cloud cloud-2" width="100" height="40" viewBox="0 0 100 40">
+                <path d="M10 30 Q25 10 40 30 T70 30 Q85 30 90 20 T100 30 L100 40 L0 40 Z"></path>
+            </svg>
+            <div class="sun"></div>
+            <svg class="butterfly butterfly-1" viewBox="0 0 24 24">
+                <path d="M12 4 L14 8 L12 12 L10 8 Z M12 12 L14 16 L12 20 L10 16 Z"></path>
+            </svg>
+            <svg class="butterfly butterfly-2" viewBox="0 0 24 24">
+                <path d="M12 4 L14 8 L12 12 L10 8 Z M12 12 L14 16 L12 20 L10 16 Z"></path>
+            </svg>
+            <h1>Maunna Content</h1>
+        </header>
+
+        <section class="content-section">
+            <div class="social-grid">
+                <div class="profile-section">
+                    <h2>Matheus Torres</h2>
+                    <div class="social-buttons">
+                        <a href="https://www.instagram.com/matheustorresmp3/" class="social-button instagram">Instagram</a>
+                        <a href="https://www.youtube.com/channel/UCig_erjAVgI-h8uF7TjvrMQ" class="social-button youtube">YouTube</a>
+                        <a href="https://x.com/umadocemaresia" class="social-button twitter">Twitter</a>
+                        <a href="https://www.tiktok.com/@matheustorresmp3" class="social-button tiktok">TikTok</a>
+                        <a href="https://bsky.app/profile/matheustorresmp3.bsky.social" class="social-button bluesky">BlueSky</a>
+                        <a href="https://open.spotify.com/artist/1WBWAnda6wREVqdTiGCj6o" class="social-button spotify">Spotify</a>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h2>Unna X</h2>
+                    <div class="social-buttons">
+                        <a href="https://www.instagram.com/unnaxoficial/" class="social-button instagram">Instagram</a>
+                        <a href="https://www.youtube.com/@UNNAX" class="social-button youtube">YouTube</a>
+                        <a href="https://x.com/UNNAXOFICIAL" class="social-button twitter">Twitter</a>
+                        <a href="https://www.tiktok.com/@unnaxoficial" class="social-button tiktok">TikTok</a>
+                        <a href="https://bsky.app/profile/unnaxoficial.bsky.social" class="social-button bluesky">BlueSky</a>
+                        <a href="https://www.facebook.com/UNNAXOFICIAL" class="social-button facebook">Facebook</a>
+                        <a href="https://open.spotify.com/artist/0WNiUQbsRbS1Q5UXGAtN8V" class="social-button spotify">Spotify</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Conteúdo Recente</h2>
+            <div class="content-feed">
+                <!-- Aqui seria inserido dinamicamente o conteúdo das redes sociais -->
+                <div class="content-card">
+                    <h3>#maunna</h3>
+                    <p>Conteúdo relacionado à hashtag será exibido aqui...</p>
+                </div>
+                <div class="content-card">
+                    <h3>#ashleydelima</h3>
+                    <p>Conteúdo relacionado à hashtag será exibido aqui...</p>
+                </div>
+                <div class="content-card">
+                    <h3>#unnax</h3>
+                    <p>Conteúdo relacionado à hashtag será exibido aqui...</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
